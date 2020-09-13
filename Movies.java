@@ -29,7 +29,8 @@ public class Movies {
 
     //precond: avail represents the movies available, taken represents the movies currently selected,
     //maxTake represents how many more movies can be selected. 
-    //postcond: select() is called again, with the first movie from avail removed 
+    //postcond: select() is called again, if there are still available movies and more movies can be selected.
+    //this method returns an int indicating the highest possible score of watchable movies. 
     private int select(LinkedList<Movie> avail, LinkedList<Movie> taken, int maxTake ) {
         if (maxTake == 0 || avail.isEmpty()) {
             return this.totalScore(taken);
